@@ -1,0 +1,56 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @flat.picture_url%>);">
+</div>
+
+<div class="container">
+<div class="d-flex justify-content-between row negative-margin">
+  <div class="col-8">
+    <div class="gray-background p-4 my-4">
+      <h2><%= @flat.name %></h2>
+      <p><%= @flat.address %></p>
+    </div>
+
+    <div class="gray-background p-4 my-4">
+      <h4>A bit more about this flat...</h4>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="gray-background p-4 my-4">
+      <h6>Book this place!</h6>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">From:</span>
+          </div>
+          <input type="text" class="form-control" id="validationTooltipUsername" placeholder="12/10/2021" aria-describedby="validationTooltipUsernamePrepend" required>
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">To:</span>
+          </div>
+          <input type="text" class="form-control" id="validationTooltipUsername" placeholder="18/10/2021" aria-describedby="validationTooltipUsernamePrepend" required>
+        </div>
+      <%= link_to 'Book', flat_path, class: 'btn btn-success ' %>
+    </div>
+
+    <div class="gray-background p-4 my-4">
+      <h4>Details</h4>
+      <div class="d-flex justify-content-start">
+        <div class="margin-right"><i class="fas fa-user-friends"></i><span class="margin-left"><%= @flat.number_of_guests %></span></div>
+        <div><i class="fas fa-euro-sign"></i><span class="margin-left"><%= @flat.price_per_night %></span></div>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-around gray-background p-4 my-4">
+      <p class="m-0">Share</p>
+      <ul class="d-flex no-list m-0">
+        <li class="icons"><i class="fab fa-facebook-square margin-left"></i></li>
+        <li class="icons"><i class="fab fa-twitter-square margin-left"></i></li>
+        <li class="icons"><i class="fab fa-github-square margin-left"></i></li>
+        <li class="icons"><i class="fas fa-envelope-square margin-left"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
